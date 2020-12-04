@@ -1,0 +1,7 @@
+{
+  "name": "concierge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
