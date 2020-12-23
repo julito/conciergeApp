@@ -1,0 +1,11 @@
+{
+  "name": "concierge",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "ce724ff1"
+}
