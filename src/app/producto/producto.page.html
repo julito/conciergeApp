@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  *ngFor="let producto of productos">
+  
+  <ion-slides pager="true" >
+
+    <ion-slide>
+      <div class="slide">
+        <img src="https://conciergehotline.net/images/productos/slide/{{producto.nombre.replaceAll(' ','-') }}/A.jpg"/>
+             
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://conciergehotline.net/images/productos/slide/{{producto.nombre.replaceAll(' ','-') }}/B.jpg"/>
+   
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://conciergehotline.net/images/productos/slide/{{producto.nombre.replaceAll(' ','-') }}/C.jpg"/>
+   
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://conciergehotline.net/images/productos/slide/{{producto.nombre.replaceAll(' ','-') }}/D.jpg"/>
+     
+    </ion-slide>
+
+  </ion-slides>
+
+<h4 style="text-align: center;">{{producto.nombre}}</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" min="2020-12-10" max="2021-12-31" value=""></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Adult</ion-label>
+      <ion-select position="floating" value="0" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+        <ion-select-option value="7">7</ion-select-option>
+        <ion-select-option value="8">8</ion-select-option>
+        <ion-select-option value="9">9</ion-select-option>
+        <ion-select-option value="10">10</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Child</ion-label>
+      <ion-select position="floating" value="0" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+        <ion-select-option value="7">7</ion-select-option>
+        <ion-select-option value="8">8</ion-select-option>
+        <ion-select-option value="9">9</ion-select-option>
+        <ion-select-option value="10">10</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hotel</ion-label>
+      <ion-select position="floating" value="0" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="name">name</ion-select-option>
+      
+        
+      </ion-select>
+    </ion-item>
+
+
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let producto of productos" #ionItemSliding>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://conciergehotline.net/images/productos/tour/preview/{{producto.nombre.replaceAll(' ','-') }}.jpg" />
+        </ion-thumbnail>
+        <ion-label text-wrap>
+          <h2>{{producto.nombre}}</h2>
+          
+          <p>Price:$ {{precio_pagar|number}}</p>
+        </ion-label>
+        <ion-badge slot="end" color="danger">{{producto.codigo}}</ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning" (click)="Editar(producto, ionItemSliding)">Keep Shopping</ion-item-option>
+        <ion-item-option color="danger" (click)="Borrar(producto, ionItemSliding)">Procced to Pay</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div [innerHTML]=producto.INCLUDE></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+  
+  
+  
+
+  
+
+
+
+
+</ion-content>
+<ion-footer class="ion-no-border" color="danger">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="images-outline"></ion-icon>
+          <ion-label>Gallery</ion-label>
+         
+        </ion-tab-button>
+    
+        <ion-tab-button tab="speakers">
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+          <ion-label>Contact Us</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="about">
+          <ion-icon name="information-circle"></ion-icon>
+          <ion-label>About</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

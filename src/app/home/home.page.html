@@ -1,0 +1,102 @@
+<ion-header>
+  
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-thumbnail item-left="" style="background-image: url(https://conciergehotline.net/images/fondo_concierge.png);background-size: 100%;width: 100%;height: 150px;background-repeat: no-repeat;padding-top: 75px;">
+   
+  
+  </ion-thumbnail>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)='cargarDireccion("tours")' size="12">
+        <div>
+      <img src="https://conciergehotline.net/appconcierge/img/tours.png">
+    </div>
+  </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)='cargarDireccion("key-west")' size="6">
+        <div>
+          <img src="https://conciergehotline.net/appconcierge/img/keywest.png">
+        </div>
+      </ion-col>
+      <ion-col (click)='cargarDireccion("seaquarium")' size="6">
+        <div>
+          <img src="https://conciergehotline.net/appconcierge/img/seaquarium.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)='cargarDireccion("boat-rental")' size="12">
+        <div>
+          <img src="https://conciergehotline.net/appconcierge/img/boatrental.png">
+        </div>
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-slides pager="true" >
+
+    <ion-slide>
+      <div class="slide">
+        <img src="https://lowpricemiamitours.com/backend/vistas/img/slider/1.png"/>
+        <h2>Miami Double Decker Hop-on Hop Off</h2>
+        
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://lowpricemiamitours.com/backend/vistas/img/slider/2.png"/>
+      <h2>Miami Double Decker + Boat Tour</h2>
+      
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://lowpricemiamitours.com/backend/vistas/img/slider/6.png"/>
+      <h2>Everglades Holiday Park</h2>
+      
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://lowpricemiamitours.com/backend/vistas/img/slider/14.png"/>
+      <h2>Key West</h2>
+      
+    </ion-slide>
+
+  </ion-slides>
+
+
+</ion-content>
+<ion-footer class="ion-no-border" color="danger">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="images-outline"></ion-icon>
+          <ion-label>Gallery</ion-label>
+         
+        </ion-tab-button>
+    
+        <ion-tab-button tab="speakers">
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+          <ion-label>Contact Us</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="about">
+          <ion-icon name="information-circle"></ion-icon>
+          <ion-label>About</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
